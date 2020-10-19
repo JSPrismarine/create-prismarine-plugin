@@ -1,0 +1,31 @@
+{
+  "name": "@jsprismarine/create-prismarine-plugin",
+  "version": "0.0.2",
+  "main": "index.js",
+  "bin": {
+    "create-prismarine-plugin": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "ncc build ./index.ts -w -o dist/",
+    "prerelease": "rimraf ./dist/",
+    "release": "ncc build ./index.ts -o ./dist/ --minify --no-cache --no-source-map-register",
+    "prepublish": "yarn release"
+  },
+  "keywords": [
+    "jsprismarine",
+    "prismarine",
+    "minecraft",
+    "bedrock"
+  ],
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/node": "14.11.10",
+    "@types/prompts": "2.0.9",
+    "@vercel/ncc": "0.24.1",
+    "chalk": "4.1.0",
+    "commander": "2.20.0",
+    "prompts": "2.3.2",
+    "rimraf": "3.0.2"
+  }
+}
