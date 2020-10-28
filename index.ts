@@ -99,8 +99,8 @@ async function run(): Promise<void> {
         this.api = api;
     }
 
-    public async onStart() { }
-    public async onExit() { }
+    public async onEnable() { }
+    public async onDisable() { }
 }`);
     writeFileSync(path.join(projectPath, 'tsconfig.json'), `{
     "compilerOptions": {
