@@ -61,7 +61,9 @@ async function run(): Promise<void> {
     });
 
     mkdirSync(projectPath);
-    writeFileSync(path.join(projectPath, 'package.json'), `{
+    writeFileSync(
+      path.join(projectPath, "package.json"),
+      `{
     "name": "${projectPath}",
     "version": "1.0.0",
     "description": "",
@@ -83,11 +85,13 @@ async function run(): Promise<void> {
     "license": "ISC",
     "dependencies": { },
     "devDependencies": {
+        "@jsprismarine/prismarine": "latest",
         "@vercel/ncc": "0.24.1",
         "npm-pack-zip": "1.2.7",
         "renamer": "2.0.1"
     }
-}`);
+}`
+    );
     writeFileSync(path.join(projectPath, '.gitignore'), `/node_modules/
 /dist/
 *.log
