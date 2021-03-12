@@ -96,7 +96,7 @@ async function run(): Promise<void> {
 /dist/
 *.log
 .DS_Store`);
-    writeFileSync(path.join(projectPath, 'index.ts'), `import type PluginApi from '@jsprismarine/prismarine/dist/src/plugin/api/versions/${apiVersion}/PluginApi';
+    writeFileSync(path.join(projectPath, 'index.ts'), `import type PluginApi from '@jsprismarine/prismarine/dist/plugin/api/versions/${apiVersion}/PluginApi';
 
 export default class PluginBase {
     api: PluginApi;
