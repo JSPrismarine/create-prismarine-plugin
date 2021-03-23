@@ -102,7 +102,7 @@ async function run(): Promise<void> {
   );
   writeFileSync(
     path.join(projectPath, "index.ts"),
-    `import type PluginApi from '@jsprismarine/prismarine/dist/plugin/api/versions/${apiVersion}/PluginApi';
+    `import type { PluginApi } from '@jsprismarine/prismarine';
 
 export default class PluginBase {
     api: PluginApi;
