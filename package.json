@@ -20,6 +20,7 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "@jsprismarine/prismarine": "^0.1.0-rc.49",
     "@types/node": "^14.11.10",
     "@types/prompts": "2.0.9",
     "@vercel/ncc": "0.24.1",
